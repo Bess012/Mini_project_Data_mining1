@@ -21,3 +21,4 @@ streamlit run app.py
 
 ## Live demo
 https://prorate-estimator-domelike.ngrok-free.dev
+https://loanpredictiondahsboard.streamlit.app
