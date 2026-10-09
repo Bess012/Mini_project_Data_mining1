@@ -1,0 +1,1015 @@
+age,position,minutes_played,goals,assists,market_value,previous_transfers,is_loaned
+38,Centre-Forward,1192,8,0,6000000.0,2,0
+42,Goalkeeper,360,0,0,150000.0,5,0
+39,Centre-Forward,236,0,0,1500000.0,9,0
+27,Centre-Forward,67,0,1,400000.0,3,0
+28,Centre-Forward,68,0,1,350000.0,4,1
+42,Goalkeeper,476,0,0,50000.0,14,0
+38,Centre-Forward,777,4,0,25000.0,8,0
+34,Centre-Forward,60,0,1,500000.0,7,0
+36,Goalkeeper,720,0,0,500000.0,4,0
+38,Centre-Back,236,0,1,75000.0,5,0
+38,Centre-Back,2605,2,3,1000000.0,5,0
+37,Central Midfield,478,1,0,50000.0,6,0
+34,Right-Back,1530,4,5,1000000.0,5,0
+36,Defensive Midfield,530,0,0,500000.0,1,0
+35,Centre-Forward,64,0,0,1000000.0,12,0
+26,Centre-Forward,37,0,0,325000.0,2,0
+36,Centre-Forward,1811,7,0,200000.0,3,0
+32,Centre-Forward,409,0,0,8000000.0,8,1
+36,Attacking Midfield,516,1,2,750000.0,5,0
+36,Central Midfield,298,0,0,100000.0,6,0
+36,Left Midfield,161,1,1,50000.0,10,1
+39,Centre-Forward,912,1,3,1000000.0,6,0
+35,Centre-Forward,153,0,0,500000.0,15,0
+34,Right-Back,955,0,0,200000.0,10,0
+34,Central Midfield,615,0,1,3500000.0,5,0
+35,Goalkeeper,1890,0,0,350000.0,6,0
+35,Goalkeeper,1890,0,0,150000.0,2,0
+32,Central Midfield,610,0,1,900000.0,6,0
+35,Right-Back,1592,0,1,1500000.0,6,0
+34,Defensive Midfield,1704,0,2,100000.0,5,0
+33,Goalkeeper,360,0,0,200000.0,4,1
+35,Centre-Forward,191,0,0,2000000.0,16,0
+35,Attacking Midfield,264,0,1,1500000.0,11,1
+34,Centre-Forward,1002,3,1,1000000.0,2,0
+32,Central Midfield,1804,5,5,800000.0,7,0
+31,Centre-Forward,370,2,1,1500000.0,11,1
+35,Second Striker,1468,7,4,8000000.0,5,0
+32,Central Midfield,1416,0,1,1500000.0,10,0
+31,Centre-Back,2682,2,2,500000.0,3,0
+29,Right Winger,63,0,0,8000000.0,7,0
+31,Central Midfield,1621,1,1,100000.0,3,0
+32,Right-Back,346,0,0,700000.0,3,0
+32,Attacking Midfield,31,0,0,200000.0,3,0
+34,Central Midfield,599,0,2,1500000.0,6,0
+31,Centre-Forward,707,2,1,500000.0,16,0
+32,Attacking Midfield,180,0,0,2000000.0,9,0
+35,Centre-Back,865,0,1,700000.0,5,0
+32,Left Winger,852,2,0,500000.0,9,0
+32,Left Winger,852,2,0,350000.0,10,0
+32,Attacking Midfield,105,0,0,2100000.0,9,1
+31,Central Midfield,531,2,0,2200000.0,2,0
+33,Attacking Midfield,2548,10,12,1500000.0,5,0
+31,Central Midfield,1933,1,4,500000.0,2,0
+28,Right Midfield,290,0,1,1600000.0,5,0
+31,Centre-Back,249,0,0,2000000.0,6,1
+35,Centre-Forward,1915,7,2,200000.0,10,0
+30,Centre-Back,2579,5,2,700000.0,9,0
+31,Defensive Midfield,1651,4,0,250000.0,1,0
+32,Defensive Midfield,1187,1,1,1200000.0,6,0
+34,Left-Back,351,0,1,600000.0,6,1
+34,Goalkeeper,1890,0,0,200000.0,7,0
+36,Central Midfield,152,1,0,400000.0,9,0
+31,Left Midfield,90,0,0,100000.0,4,0
+29,Centre-Forward,13,0,0,3000000.0,5,0
+32,Centre-Forward,4,0,0,400000.0,8,1
+34,Centre-Forward,965,5,1,150000.0,9,0
+32,Left-Back,127,0,0,2500000.0,7,1
+31,Central Midfield,416,0,0,6000000.0,2,1
+31,Right-Back,175,0,0,10000000.0,8,1
+30,Central Midfield,654,1,0,8000000.0,8,1
+30,Central Midfield,90,0,0,25000000.0,6,0
+27,Centre-Forward,1115,10,1,1500000.0,1,0
+31,Left-Back,114,0,0,800000.0,8,1
+31,Centre-Back,1052,1,0,500000.0,10,0
+32,Goalkeeper,23,0,0,225000.0,6,0
+30,Left Winger,150,0,0,1500000.0,5,1
+31,Left Winger,1104,3,3,1500000.0,6,0
+30,Left-Back,212,0,0,3000000.0,4,1
+30,Centre-Back,148,0,0,1800000.0,8,0
+34,Attacking Midfield,1000,3,3,175000.0,11,0
+29,Left-Back,353,0,0,15000000.0,5,0
+30,Defensive Midfield,871,0,2,600000.0,2,0
+30,Right Winger,262,0,0,8000000.0,5,0
+34,Centre-Forward,1,0,0,400000.0,14,1
+30,Goalkeeper,1215,0,0,450000.0,7,0
+32,Centre-Forward,50,1,0,800000.0,7,0
+30,Goalkeeper,90,0,0,9000000.0,3,1
+31,Goalkeeper,90,0,0,4000000.0,4,1
+35,Centre-Forward,2199,9,3,3000000.0,5,0
+31,Goalkeeper,90,0,0,5000000.0,2,1
+33,Central Midfield,2251,6,3,2500000.0,9,0
+28,Goalkeeper,540,0,0,2500000.0,5,0
+32,Centre-Back,809,0,0,2500000.0,12,0
+31,Right Winger,881,2,3,400000.0,6,0
+32,Central Midfield,2691,3,10,4000000.0,5,0
+29,Left Winger,645,2,2,8000000.0,8,1
+31,Right-Back,934,0,0,600000.0,7,0
+30,Right Winger,281,0,0,4500000.0,3,1
+32,Right Winger,471,0,1,700000.0,6,0
+29,Centre-Forward,1,0,0,4000000.0,8,1
+30,Central Midfield,3166,2,2,5000000.0,6,0
+33,Central Midfield,1004,1,1,2000000.0,4,0
+32,Central Midfield,7,0,0,4500000.0,7,0
+34,Centre-Forward,568,0,0,550000.0,5,0
+30,Centre-Forward,287,0,1,2500000.0,6,1
+28,Centre-Back,384,1,0,5500000.0,5,0
+28,Centre-Back,384,1,0,5500000.0,6,1
+34,Defensive Midfield,1567,2,1,4500000.0,5,0
+29,Central Midfield,731,2,1,3000000.0,5,0
+31,Right Winger,321,0,1,1000000.0,10,0
+30,Goalkeeper,1530,0,0,1400000.0,6,0
+36,Centre-Back,88,0,0,275000.0,0,1
+32,Attacking Midfield,171,0,1,2000000.0,6,0
+31,Central Midfield,1746,7,2,3500000.0,4,0
+29,Right-Back,798,0,1,450000.0,7,0
+32,Left-Back,1172,1,0,7000000.0,3,0
+30,Goalkeeper,90,0,0,250000.0,6,0
+33,Centre-Back,526,0,0,1000000.0,7,0
+29,Central Midfield,2900,1,2,4000000.0,3,0
+32,Second Striker,820,5,1,5000000.0,5,0
+29,Centre-Back,405,0,0,700000.0,3,0
+32,Defensive Midfield,767,0,0,400000.0,7,0
+29,Central Midfield,817,2,1,1200000.0,8,0
+27,Right Winger,46,0,0,8000000.0,8,0
+31,Central Midfield,373,0,0,350000.0,11,0
+29,Attacking Midfield,91,0,0,200000.0,5,1
+32,Centre-Forward,1671,8,2,700000.0,14,0
+31,Centre-Forward,465,1,0,1000000.0,4,0
+29,Left Winger,273,0,0,400000.0,7,0
+31,Centre-Back,1,0,0,6500000.0,5,0
+30,Left Winger,325,0,0,800000.0,5,0
+30,Defensive Midfield,1271,2,3,800000.0,4,0
+30,Right Winger,492,1,4,700000.0,10,0
+32,Attacking Midfield,1725,4,0,350000.0,4,0
+29,Goalkeeper,2430,0,1,20000000.0,8,0
+30,Right-Back,270,0,0,1200000.0,7,0
+28,Right-Back,141,0,0,3000000.0,3,0
+28,Left-Back,360,0,1,2500000.0,6,0
+28,Centre-Back,1163,0,1,2000000.0,9,1
+29,Defensive Midfield,1525,3,6,9000000.0,0,0
+31,Centre-Back,762,0,0,900000.0,4,0
+30,Centre-Back,45,0,0,300000.0,3,0
+29,Centre-Forward,209,1,0,6000000.0,11,0
+28,Centre-Back,886,0,0,350000.0,7,0
+31,Left-Back,647,1,4,150000.0,3,0
+28,Central Midfield,708,2,1,2500000.0,1,0
+27,Central Midfield,158,0,1,6000000.0,2,1
+29,Right Midfield,2229,2,2,800000.0,0,0
+28,Centre-Forward,101,1,0,1000000.0,5,0
+28,Centre-Back,211,0,0,150000.0,8,1
+31,Right-Back,21,0,0,2500000.0,2,1
+29,Defensive Midfield,103,0,0,700000.0,4,0
+30,Centre-Back,1402,0,0,900000.0,8,0
+29,Centre-Back,1707,1,0,4000000.0,9,0
+28,Central Midfield,1109,2,0,3500000.0,4,0
+30,Centre-Forward,2247,11,2,7000000.0,10,0
+26,Central Midfield,1557,1,1,6000000.0,5,1
+27,Centre-Forward,122,1,0,13000000.0,5,0
+30,Centre-Back,2820,2,0,17000000.0,4,0
+27,Centre-Forward,349,1,0,5500000.0,2,1
+29,Defensive Midfield,96,0,0,17000000.0,10,1
+28,Centre-Forward,189,1,0,3500000.0,3,0
+32,Defensive Midfield,751,0,0,450000.0,6,0
+29,Right Winger,2185,4,12,6000000.0,5,0
+31,Central Midfield,1240,0,0,1800000.0,3,0
+27,Centre-Forward,146,0,0,2000000.0,5,1
+31,Left-Back,1254,1,2,500000.0,8,0
+29,Goalkeeper,360,0,0,9500000.0,4,0
+28,Central Midfield,40,0,0,1400000.0,9,1
+28,Right-Back,31,0,0,2000000.0,10,0
+27,Right Winger,180,1,0,20000000.0,8,0
+28,Goalkeeper,194,0,0,200000.0,5,0
+28,Centre-Forward,60,1,0,200000.0,1,0
+27,Central Midfield,1343,0,3,450000.0,1,0
+27,Defensive Midfield,493,0,0,450000.0,5,0
+27,Left Winger,665,0,1,400000.0,5,0
+29,Attacking Midfield,250,1,0,1000000.0,2,1
+29,Centre-Back,2305,0,1,2500000.0,4,0
+27,Left-Back,180,0,0,2500000.0,5,0
+29,Goalkeeper,2025,0,1,850000.0,12,0
+30,Centre-Forward,135,0,0,4000000.0,7,0
+26,Right Winger,158,0,0,350000.0,7,0
+25,Right-Back,63,0,0,50000.0,4,1
+31,Left-Back,93,1,0,800000.0,3,0
+26,Attacking Midfield,440,1,1,12000000.0,4,0
+28,Centre-Back,1888,2,3,3000000.0,5,0
+27,Goalkeeper,270,0,0,2000000.0,3,1
+27,Central Midfield,459,0,0,1000000.0,8,1
+27,Right Winger,467,0,0,4000000.0,5,1
+26,Centre-Forward,645,4,1,25000000.0,4,1
+27,Centre-Forward,2123,18,3,45000000.0,5,0
+27,Centre-Back,57,0,0,5000000.0,8,1
+28,Goalkeeper,30,0,0,400000.0,8,0
+28,Centre-Forward,1255,7,1,14000000.0,6,0
+28,Centre-Forward,1255,7,1,14000000.0,7,0
+32,Left-Back,275,0,0,3000000.0,4,0
+29,Central Midfield,1988,1,1,350000.0,4,0
+29,Central Midfield,1746,2,3,3000000.0,4,0
+26,Central Midfield,1437,0,4,1200000.0,3,0
+27,Centre-Back,181,0,0,275000.0,7,1
+28,Centre-Forward,152,0,1,4000000.0,12,0
+28,Centre-Back,1265,0,0,3500000.0,4,1
+26,Left Winger,661,1,2,25000000.0,8,1
+29,Left Winger,859,0,1,1800000.0,6,0
+28,Right Midfield,142,0,0,5000000.0,4,0
+26,Right Winger,241,0,1,200000.0,4,0
+28,Right Winger,1029,0,2,400000.0,5,0
+26,Defensive Midfield,11,0,0,1500000.0,2,0
+28,Right Winger,8,0,0,7500000.0,8,1
+28,Central Midfield,688,1,0,18000000.0,6,0
+31,Defensive Midfield,177,0,0,6000000.0,5,0
+28,Left Winger,1611,4,2,750000.0,3,0
+26,Centre-Back,214,0,0,1500000.0,6,1
+27,Centre-Forward,2,0,0,8000000.0,5,0
+26,Centre-Back,180,0,0,12000000.0,2,1
+27,Centre-Back,2541,2,1,22000000.0,3,0
+28,Central Midfield,214,0,0,2200000.0,3,1
+25,Goalkeeper,720,0,0,1000000.0,5,1
+26,Attacking Midfield,887,2,1,500000.0,8,1
+28,Centre-Back,1137,0,0,350000.0,3,0
+23,Centre-Back,1018,0,0,700000.0,3,1
+27,Goalkeeper,69,0,0,200000.0,5,0
+28,Right Winger,800,1,0,2500000.0,3,0
+29,Centre-Back,90,0,0,25000000.0,3,1
+29,Right Winger,469,1,3,6000000.0,4,0
+26,Attacking Midfield,270,1,2,3500000.0,0,0
+27,Centre-Forward,22,0,0,650000.0,7,0
+29,Right-Back,988,2,2,10000000.0,5,0
+29,Centre-Forward,1054,3,0,6000000.0,9,1
+30,Left-Back,1690,1,3,2500000.0,4,0
+26,Defensive Midfield,35,0,0,22000000.0,2,1
+26,Left Winger,309,1,0,4000000.0,7,1
+26,Centre-Forward,294,0,1,3500000.0,6,0
+25,Right Winger,992,1,1,8000000.0,7,1
+31,Centre-Forward,2928,22,5,7000000.0,6,0
+30,Goalkeeper,1350,0,1,1000000.0,3,1
+25,Goalkeeper,90,0,0,6000000.0,5,0
+29,Centre-Back,180,0,0,18000000.0,5,0
+28,Centre-Forward,538,4,1,9000000.0,5,0
+29,Centre-Back,158,0,0,225000.0,1,1
+30,Right Winger,158,0,0,3500000.0,4,1
+29,Right-Back,13,0,0,550000.0,1,1
+24,Centre-Forward,27,1,1,4500000.0,5,0
+26,Centre-Back,1453,4,1,10000000.0,10,0
+27,Left Winger,1291,5,0,4000000.0,4,1
+30,Centre-Forward,387,2,1,1000000.0,7,0
+25,Centre-Forward,50,0,0,50000000.0,5,1
+26,Centre-Forward,702,1,0,25000000.0,6,0
+28,Right-Back,1665,1,3,2000000.0,2,0
+28,Centre-Forward,14,0,0,4000000.0,7,1
+28,Defensive Midfield,27,0,0,8000000.0,5,0
+26,Right Midfield,2263,2,2,20000000.0,6,0
+27,Goalkeeper,2880,0,0,7500000.0,11,0
+25,Right Winger,1128,2,3,11000000.0,5,0
+25,Right Midfield,152,0,0,700000.0,1,1
+26,Centre-Forward,720,1,2,3000000.0,3,1
+26,Left-Back,45,0,0,125000.0,6,1
+26,Right Winger,223,0,0,900000.0,5,1
+32,Defensive Midfield,180,0,0,6000000.0,5,0
+27,Central Midfield,112,0,0,15000000.0,8,0
+27,Attacking Midfield,693,0,0,800000.0,6,1
+28,Right Winger,589,1,0,300000.0,7,0
+30,Left-Back,360,0,2,4000000.0,5,0
+25,Centre-Back,1451,3,0,1800000.0,1,0
+31,Centre-Back,1035,1,2,5000000.0,6,0
+26,Centre-Back,1327,4,0,750000.0,3,0
+27,Centre-Back,1349,0,1,1200000.0,6,1
+26,Centre-Forward,58,0,0,500000.0,4,1
+25,Central Midfield,25,0,0,4000000.0,4,1
+26,Left Winger,23,0,0,24000000.0,7,0
+29,Attacking Midfield,1,0,0,2500000.0,6,1
+27,Right-Back,3189,1,2,5000000.0,2,0
+25,Left Winger,16,0,1,20000000.0,6,1
+26,Left Winger,636,2,2,15000000.0,7,0
+26,Second Striker,50,0,1,12000000.0,10,1
+26,Central Midfield,1435,3,1,8000000.0,7,0
+25,Centre-Back,1800,2,3,55000000.0,3,0
+25,Left Winger,2528,3,3,6000000.0,2,0
+25,Attacking Midfield,892,3,0,18000000.0,3,1
+25,Right Winger,62,0,0,1500000.0,6,0
+25,Left Winger,76,0,0,2500000.0,3,0
+25,Right-Back,22,0,0,2500000.0,1,1
+28,Centre-Back,373,0,1,4000000.0,1,0
+29,Centre-Forward,1310,7,2,700000.0,11,0
+26,Centre-Back,214,0,0,1500000.0,6,0
+25,Defensive Midfield,49,0,0,10000000.0,3,1
+26,Left Winger,86,0,0,400000.0,7,0
+28,Centre-Forward,404,1,0,3500000.0,6,0
+28,Centre-Back,90,0,0,5000000.0,3,0
+26,Left Winger,146,1,1,9000000.0,5,1
+28,Central Midfield,718,1,0,1800000.0,9,0
+28,Defensive Midfield,632,0,0,1200000.0,9,0
+25,Defensive Midfield,1697,3,3,2000000.0,4,0
+27,Defensive Midfield,1399,3,1,1800000.0,1,1
+26,Right Winger,25,0,0,10000000.0,2,1
+25,Centre-Forward,80,0,0,3500000.0,3,1
+26,Centre-Forward,1813,6,0,2500000.0,4,0
+29,Left Winger,209,0,0,1000000.0,7,0
+27,Right Winger,122,0,0,1500000.0,6,1
+28,Right-Back,932,0,0,800000.0,7,0
+26,Centre-Back,1244,0,0,800000.0,3,1
+26,Centre-Back,1756,0,0,600000.0,4,0
+25,Left Winger,1,0,0,1000000.0,5,0
+26,Centre-Forward,878,0,0,3000000.0,7,1
+25,Centre-Forward,346,0,0,2200000.0,6,0
+25,Defensive Midfield,1787,0,2,4500000.0,7,0
+25,Second Striker,226,0,2,22000000.0,3,0
+28,Left Winger,797,2,0,35000000.0,6,0
+28,Centre-Back,28,0,0,4000000.0,8,0
+23,Left Winger,188,0,0,5000000.0,6,1
+24,Central Midfield,178,1,0,22000000.0,2,1
+28,Left Winger,5,0,0,1500000.0,8,1
+29,Attacking Midfield,783,0,3,500000.0,6,0
+24,Left Winger,3023,7,5,17000000.0,2,0
+29,Centre-Back,6,0,0,3000000.0,3,1
+29,Central Midfield,874,1,1,12000000.0,4,1
+24,Centre-Forward,240,1,1,5000000.0,5,0
+29,Left Winger,263,0,0,10000000.0,9,1
+28,Defensive Midfield,25,0,0,700000.0,2,1
+24,Centre-Forward,2,0,0,500000.0,3,0
+25,Left Winger,9,0,0,200000.0,8,0
+26,Centre-Back,2790,5,0,7000000.0,4,0
+24,Central Midfield,1317,2,4,25000000.0,2,0
+28,Central Midfield,88,0,1,7000000.0,2,1
+24,Attacking Midfield,4,0,0,5500000.0,5,1
+25,Attacking Midfield,4,0,0,3500000.0,6,1
+27,Central Midfield,608,0,1,2000000.0,3,0
+28,Defensive Midfield,90,0,0,7000000.0,5,0
+26,Central Midfield,530,0,0,5000000.0,1,0
+25,Right-Back,2752,0,1,200000.0,6,0
+29,Left-Back,530,0,0,300000.0,6,0
+26,Centre-Back,2217,0,1,35000000.0,6,0
+29,Defensive Midfield,61,0,0,400000.0,5,0
+26,Right Winger,559,0,0,2000000.0,7,0
+25,Centre-Forward,1404,1,1,40000000.0,5,0
+25,Defensive Midfield,585,0,1,7000000.0,7,1
+26,Defensive Midfield,1458,0,4,6000000.0,8,0
+25,Central Midfield,157,0,0,5000000.0,6,0
+24,Defensive Midfield,2514,5,6,7000000.0,2,0
+24,Defensive Midfield,2633,5,2,2500000.0,1,0
+26,Right Winger,361,1,0,10000000.0,3,1
+28,Centre-Forward,948,7,0,22000000.0,5,0
+24,Attacking Midfield,52,1,0,2400000.0,5,1
+24,Central Midfield,277,0,0,4000000.0,6,0
+26,Defensive Midfield,1193,1,1,3800000.0,5,0
+24,Centre-Forward,144,0,0,6500000.0,2,0
+25,Centre-Forward,1200,5,1,1300000.0,5,0
+28,Right Winger,191,1,0,7000000.0,7,1
+26,Attacking Midfield,2654,6,3,900000.0,6,0
+26,Goalkeeper,90,0,0,1000000.0,4,0
+28,Attacking Midfield,1522,4,1,35000000.0,3,0
+27,Central Midfield,317,0,0,25000000.0,5,1
+25,Centre-Forward,60,0,0,1000000.0,7,1
+31,Left-Back,132,0,0,3500000.0,5,0
+28,Attacking Midfield,608,1,1,1000000.0,10,0
+28,Centre-Back,315,0,0,1200000.0,5,0
+28,Centre-Back,315,0,0,1000000.0,6,1
+24,Centre-Forward,449,1,1,5000000.0,2,1
+25,Centre-Forward,583,1,1,3000000.0,3,0
+26,Centre-Forward,1730,8,4,2500000.0,5,0
+25,Centre-Forward,486,1,1,2500000.0,2,1
+25,Central Midfield,2485,8,10,25000000.0,4,0
+26,Right-Back,54,0,0,1000000.0,4,0
+23,Centre-Forward,90,0,0,30000000.0,3,0
+28,Right Winger,633,1,1,7000000.0,8,1
+25,Central Midfield,173,1,0,7500000.0,6,1
+26,Central Midfield,1034,2,1,9000000.0,7,0
+25,Centre-Forward,175,1,0,7000000.0,5,0
+24,Goalkeeper,630,0,0,350000.0,4,1
+25,Centre-Back,1,0,0,2000000.0,2,1
+25,Centre-Forward,532,2,0,600000.0,4,1
+24,Centre-Back,180,1,0,50000.0,9,1
+27,Centre-Forward,64,1,0,250000.0,3,0
+26,Central Midfield,1430,2,1,28000000.0,7,0
+24,Attacking Midfield,103,0,0,1200000.0,2,0
+27,Centre-Back,20,0,0,4500000.0,7,1
+26,Right-Back,1301,2,3,5000000.0,1,0
+24,Central Midfield,2639,0,4,20000000.0,3,0
+24,Centre-Back,1029,0,0,7500000.0,8,0
+25,Central Midfield,248,0,0,9000000.0,4,0
+29,Defensive Midfield,65,0,0,2500000.0,5,1
+29,Centre-Back,3290,0,5,25000000.0,2,0
+27,Central Midfield,59,0,1,2500000.0,4,0
+24,Centre-Forward,2350,5,0,5000000.0,3,0
+25,Left Winger,307,1,0,1200000.0,6,1
+23,Central Midfield,1280,2,4,23000000.0,1,0
+24,Right Winger,606,2,0,35000000.0,2,0
+25,Left Winger,1403,6,1,1000000.0,7,0
+25,Right Winger,537,0,0,100000.0,5,1
+27,Centre-Back,1366,0,1,18000000.0,3,0
+25,Right-Back,462,0,0,15000000.0,4,1
+26,Centre-Forward,43,0,0,2500000.0,3,0
+29,Right Winger,137,0,0,3200000.0,5,1
+22,Right-Back,2436,5,3,6000000.0,2,0
+26,Centre-Back,28,0,0,1500000.0,2,0
+24,Right Winger,1,0,0,4000000.0,1,1
+27,Attacking Midfield,84,0,0,55000000.0,6,0
+29,Centre-Forward,111,1,0,5000000.0,6,0
+25,Right-Back,1099,0,2,350000.0,6,0
+26,Centre-Forward,44,0,0,1000000.0,4,1
+26,Centre-Forward,951,6,1,1000000.0,5,0
+27,Centre-Forward,919,6,0,350000.0,6,0
+23,Right-Back,428,0,0,5000000.0,7,1
+27,Left Winger,17,0,0,24000000.0,4,1
+26,Second Striker,1328,7,0,1500000.0,7,0
+24,Centre-Forward,2346,7,2,10000000.0,7,0
+25,Central Midfield,665,2,0,35000000.0,5,0
+26,Defensive Midfield,137,0,0,750000.0,1,1
+23,Centre-Forward,5,0,0,2000000.0,3,0
+24,Attacking Midfield,952,6,2,900000.0,3,0
+25,Left Winger,1421,4,3,7000000.0,8,0
+25,Centre-Back,486,0,0,3000000.0,1,0
+25,Centre-Back,576,0,0,2000000.0,2,1
+30,Centre-Forward,537,2,1,3000000.0,4,1
+24,Goalkeeper,180,0,0,3000000.0,3,0
+25,Right-Back,657,1,4,13000000.0,5,1
+27,Centre-Forward,336,0,0,1800000.0,8,0
+25,Left-Back,637,0,0,4500000.0,6,0
+24,Right Winger,588,0,0,28000000.0,4,1
+27,Left-Back,5,0,0,7000000.0,1,1
+26,Centre-Forward,8,0,0,1800000.0,5,1
+24,Left Winger,347,1,0,7000000.0,2,0
+24,Right-Back,519,0,2,2000000.0,4,0
+25,Left Winger,1814,6,2,65000000.0,3,0
+24,Attacking Midfield,101,0,0,8000000.0,4,1
+25,Attacking Midfield,596,1,2,5000000.0,5,0
+23,Goalkeeper,360,0,0,9000000.0,2,0
+22,Central Midfield,90,0,0,20000000.0,2,1
+25,Centre-Back,105,0,0,200000.0,5,1
+25,Centre-Back,105,0,0,300000.0,6,0
+23,Attacking Midfield,134,0,0,6000000.0,2,0
+23,Right-Back,1,0,0,3500000.0,3,1
+24,Central Midfield,709,0,1,8000000.0,2,1
+22,Left Winger,182,2,0,1500000.0,4,1
+29,Defensive Midfield,625,0,0,300000.0,1,1
+28,Right Winger,11,0,0,275000.0,3,0
+25,Left Winger,1175,4,2,4000000.0,10,0
+27,Left Winger,232,1,0,11000000.0,5,0
+29,Central Midfield,182,0,0,7000000.0,7,1
+23,Central Midfield,172,0,0,7000000.0,2,0
+25,Right-Back,2525,1,1,3000000.0,1,0
+26,Centre-Forward,561,3,0,2000000.0,4,1
+28,Centre-Forward,208,1,0,2300000.0,10,1
+27,Left-Back,22,0,0,3500000.0,6,0
+27,Centre-Forward,694,2,3,25000000.0,6,0
+22,Left-Back,938,0,2,6000000.0,2,0
+25,Centre-Forward,239,1,0,2500000.0,6,1
+27,Centre-Forward,50,0,0,1400000.0,5,0
+27,Centre-Back,555,0,0,250000.0,3,0
+24,Defensive Midfield,2211,1,1,700000.0,3,0
+26,Central Midfield,1,0,0,450000.0,2,0
+26,Centre-Back,1440,2,0,9000000.0,2,0
+25,Right Winger,1634,4,3,12000000.0,2,0
+25,Left-Back,1275,1,1,600000.0,2,0
+27,Central Midfield,208,0,1,2000000.0,5,0
+25,Centre-Forward,209,2,0,750000.0,6,0
+26,Right-Back,253,0,0,8500000.0,1,1
+26,Goalkeeper,1080,0,0,400000.0,8,0
+26,Centre-Forward,489,2,0,10000000.0,5,1
+23,Second Striker,2702,7,5,15000000.0,8,0
+24,Attacking Midfield,262,0,0,8000000.0,5,1
+24,Goalkeeper,180,0,0,500000.0,0,0
+24,Right-Back,76,0,0,2500000.0,2,1
+23,Right Winger,105,1,3,25000000.0,2,0
+26,Left-Back,11,0,0,150000.0,4,1
+25,Left Winger,2030,6,5,1000000.0,4,0
+25,Left-Back,2835,2,11,15000000.0,2,0
+25,Right-Back,165,1,0,4000000.0,4,1
+29,Right-Back,57,0,0,100000.0,1,0
+25,Right Winger,1,0,0,1500000.0,6,1
+26,Attacking Midfield,2416,10,3,4000000.0,1,0
+23,Centre-Forward,244,1,2,1000000.0,1,0
+23,Defensive Midfield,1136,0,0,13000000.0,3,1
+25,Centre-Forward,526,1,0,2500000.0,8,1
+24,Right Winger,187,0,0,250000.0,1,1
+22,Left Winger,80,1,0,2000000.0,8,0
+23,Centre-Forward,921,2,5,4500000.0,4,0
+26,Centre-Forward,867,6,2,550000.0,4,1
+22,Right Winger,29,0,0,1500000.0,3,0
+22,Left Winger,137,0,0,400000.0,2,1
+25,Left Winger,166,0,1,700000.0,4,1
+26,Goalkeeper,2790,0,0,8000000.0,5,0
+24,Defensive Midfield,758,0,0,1000000.0,5,0
+22,Defensive Midfield,1213,1,0,4000000.0,2,0
+27,Attacking Midfield,116,1,1,5000000.0,9,1
+25,Right Winger,1026,1,0,900000.0,0,0
+26,Attacking Midfield,284,0,0,3000000.0,5,1
+28,Central Midfield,355,0,0,650000.0,5,0
+23,Left Winger,1093,0,1,5000000.0,4,1
+23,Central Midfield,68,0,0,200000.0,2,0
+22,Centre-Forward,92,0,0,650000.0,4,1
+22,Attacking Midfield,1,0,0,30000000.0,2,1
+23,Centre-Forward,2312,13,4,2200000.0,2,0
+22,Attacking Midfield,90,0,0,70000000.0,6,0
+23,Centre-Forward,505,0,0,125000.0,2,1
+24,Centre-Forward,505,0,0,125000.0,3,0
+22,Right Winger,160,0,1,30000000.0,1,0
+29,Centre-Forward,9,0,0,1800000.0,9,0
+24,Centre-Back,10,0,0,500000.0,6,1
+24,Centre-Back,578,0,0,500000.0,7,0
+26,Left Winger,971,0,2,3500000.0,4,0
+26,Defensive Midfield,450,0,1,6000000.0,2,0
+25,Centre-Forward,401,1,0,25000000.0,10,0
+25,Centre-Forward,401,1,0,25000000.0,11,1
+23,Centre-Back,64,0,0,6000000.0,3,0
+22,Centre-Forward,111,1,0,1000000.0,5,1
+25,Centre-Back,637,0,1,7500000.0,2,1
+24,Right Winger,61,0,0,400000.0,3,0
+24,Centre-Forward,736,3,1,2200000.0,2,1
+26,Right Winger,156,0,1,400000.0,5,0
+23,Defensive Midfield,103,0,0,150000.0,1,0
+26,Right Winger,1800,10,3,65000000.0,4,0
+24,Attacking Midfield,58,0,0,10000000.0,3,1
+25,Attacking Midfield,1860,11,4,11000000.0,4,0
+23,Centre-Forward,88,0,0,25000000.0,4,1
+23,Right Winger,817,4,1,6000000.0,4,1
+28,Right Winger,1124,1,0,15000000.0,3,0
+25,Centre-Back,2970,1,3,800000.0,4,0
+26,Attacking Midfield,948,2,0,7000000.0,1,0
+23,Centre-Forward,217,1,0,4000000.0,3,0
+23,Central Midfield,32,0,0,3500000.0,1,1
+24,Defensive Midfield,2564,2,2,8000000.0,3,0
+27,Right Winger,498,3,0,1800000.0,7,0
+31,Centre-Forward,1818,8,3,1500000.0,4,0
+25,Right Winger,45,0,0,300000.0,2,1
+29,Centre-Back,2406,1,0,800000.0,5,0
+23,Right Midfield,652,0,1,2500000.0,1,0
+21,Defensive Midfield,328,0,0,1000000.0,3,1
+25,Attacking Midfield,11,0,0,400000.0,2,1
+25,Attacking Midfield,68,0,0,300000.0,3,1
+26,Attacking Midfield,68,0,0,325000.0,4,0
+26,Central Midfield,884,0,2,700000.0,4,0
+23,Centre-Forward,785,0,2,450000.0,6,0
+26,Attacking Midfield,1944,16,5,30000000.0,7,0
+26,Right Winger,48,0,0,3400000.0,6,1
+22,Central Midfield,55,0,0,1300000.0,2,0
+22,Right-Back,338,0,0,750000.0,3,1
+22,Right-Back,473,0,0,750000.0,4,0
+26,Centre-Forward,64,0,0,800000.0,7,0
+23,Attacking Midfield,65,0,0,12000000.0,2,1
+23,Attacking Midfield,743,1,0,16000000.0,3,0
+22,Centre-Forward,216,0,3,8000000.0,2,0
+24,Goalkeeper,1496,0,0,7000000.0,1,0
+23,Centre-Forward,2762,12,6,60000000.0,6,0
+23,Left-Back,1324,5,3,2000000.0,4,0
+23,Left-Back,1680,6,6,4000000.0,5,0
+27,Centre-Back,2255,1,0,3500000.0,2,0
+23,Centre-Forward,91,0,0,3500000.0,5,0
+24,Centre-Back,617,0,0,2500000.0,6,1
+24,Centre-Back,858,0,0,3000000.0,7,0
+23,Defensive Midfield,35,0,0,600000.0,2,1
+22,Centre-Back,134,0,0,2000000.0,2,1
+22,Attacking Midfield,694,3,1,1800000.0,3,0
+22,Goalkeeper,2880,0,0,15000000.0,2,0
+22,Defensive Midfield,191,0,0,4000000.0,5,1
+21,Central Midfield,24,0,0,350000.0,2,1
+23,Central Midfield,2409,8,5,1000000.0,0,0
+23,Defensive Midfield,1513,0,1,2000000.0,2,0
+24,Right-Back,126,0,0,2800000.0,1,1
+24,Left-Back,1313,0,1,1000000.0,4,1
+22,Attacking Midfield,270,0,2,32000000.0,0,1
+23,Attacking Midfield,1692,4,4,25000000.0,1,0
+23,Defensive Midfield,45,0,0,650000.0,6,0
+27,Defensive Midfield,1633,1,3,700000.0,5,0
+23,Central Midfield,186,0,0,1500000.0,4,1
+25,Centre-Back,1184,1,0,1000000.0,3,0
+23,Left Winger,562,0,1,7000000.0,6,0
+24,Defensive Midfield,10,0,0,5000000.0,1,0
+23,Attacking Midfield,262,0,0,500000.0,7,0
+29,Centre-Forward,1250,1,2,5000000.0,6,0
+25,Right-Back,1652,0,2,6000000.0,3,0
+23,Left Winger,362,1,0,1500000.0,1,0
+23,Right Winger,658,3,0,2500000.0,2,0
+22,Goalkeeper,843,0,0,600000.0,1,0
+21,Central Midfield,1395,0,0,800000.0,1,0
+23,Centre-Forward,458,3,1,900000.0,6,0
+23,Centre-Forward,458,3,1,900000.0,7,0
+23,Centre-Forward,108,1,1,15000000.0,1,0
+23,Centre-Back,2845,2,0,1500000.0,2,0
+26,Right-Back,1345,2,5,9000000.0,3,0
+23,Attacking Midfield,708,2,0,10000000.0,3,1
+23,Attacking Midfield,1168,2,0,10000000.0,4,0
+27,Right Midfield,2036,5,3,750000.0,3,0
+22,Right-Back,90,0,1,1200000.0,7,0
+26,Centre-Forward,21,0,0,400000.0,6,0
+27,Central Midfield,1087,1,1,1000000.0,2,1
+26,Right-Back,90,0,0,350000.0,2,0
+24,Centre-Forward,1109,6,3,7000000.0,3,0
+24,Centre-Forward,694,2,1,6000000.0,7,0
+24,Centre-Forward,694,2,1,6000000.0,8,1
+25,Centre-Forward,2301,8,2,10000000.0,9,0
+22,Attacking Midfield,383,1,0,10000000.0,1,1
+24,Defensive Midfield,914,0,1,350000.0,4,1
+22,Right Winger,274,1,0,400000.0,1,1
+27,Defensive Midfield,2194,0,1,1000000.0,5,0
+22,Defensive Midfield,1017,0,0,600000.0,6,0
+27,Attacking Midfield,273,2,1,400000.0,3,0
+24,Defensive Midfield,270,0,1,13000000.0,0,0
+24,Right Winger,245,0,0,6000000.0,5,1
+30,Right Winger,127,1,0,1200000.0,5,1
+21,Left Winger,57,0,0,2000000.0,2,1
+22,Left Winger,1028,3,3,6000000.0,3,0
+21,Left-Back,68,0,0,2000000.0,2,1
+23,Attacking Midfield,629,1,1,800000.0,3,0
+23,Centre-Forward,1610,8,3,2700000.0,5,0
+24,Central Midfield,2388,3,1,800000.0,7,0
+23,Left-Back,970,0,0,3000000.0,1,1
+24,Centre-Forward,25,0,0,900000.0,4,1
+22,Centre-Forward,543,3,3,32000000.0,4,1
+26,Attacking Midfield,381,0,1,500000.0,6,1
+21,Right-Back,267,1,0,3500000.0,3,0
+25,Centre-Forward,1014,4,2,500000.0,10,0
+25,Right Winger,18,0,0,3000000.0,2,1
+22,Attacking Midfield,1635,4,5,35000000.0,3,0
+22,Defensive Midfield,96,0,0,1500000.0,4,1
+24,Defensive Midfield,332,0,0,4000000.0,3,1
+24,Left Winger,658,1,1,22000000.0,4,1
+22,Attacking Midfield,555,0,2,10000000.0,8,0
+22,Centre-Forward,320,0,1,12000000.0,4,1
+23,Centre-Back,90,0,0,50000000.0,2,1
+24,Centre-Back,1882,1,2,50000000.0,3,0
+22,Centre-Back,194,0,0,10000000.0,1,1
+22,Right Winger,467,0,1,25000000.0,0,0
+22,Left-Back,472,0,0,4000000.0,1,0
+23,Centre-Forward,143,0,0,2500000.0,2,0
+25,Centre-Forward,263,0,0,300000.0,4,1
+26,Left Winger,11,0,0,15000000.0,6,1
+23,Right Winger,321,0,0,3500000.0,2,1
+24,Central Midfield,81,0,0,1000000.0,3,1
+21,Centre-Back,7,0,0,6000000.0,2,1
+22,Left Winger,547,1,2,6000000.0,3,0
+22,Centre-Back,356,0,0,450000.0,1,0
+23,Left Winger,21,0,0,3800000.0,1,1
+24,Central Midfield,2053,1,2,2500000.0,4,0
+21,Attacking Midfield,1,0,0,800000.0,3,0
+21,Centre-Forward,7,0,0,2000000.0,3,1
+27,Left Winger,1191,0,3,5000000.0,4,0
+22,Right Winger,100,0,2,12000000.0,3,0
+22,Left Winger,1961,2,5,10000000.0,2,0
+22,Right Winger,132,0,0,800000.0,2,1
+22,Left Winger,63,0,0,12000000.0,2,0
+23,Centre-Forward,2,0,0,2000000.0,4,0
+19,Central Midfield,270,0,2,1500000.0,1,1
+25,Left Winger,27,0,0,2500000.0,3,0
+22,Centre-Forward,1153,10,1,2000000.0,7,1
+24,Central Midfield,725,0,0,2000000.0,3,0
+22,Right Winger,552,0,0,1500000.0,2,1
+23,Right Winger,780,1,1,1000000.0,3,0
+25,Centre-Forward,243,0,0,1000000.0,3,1
+26,Attacking Midfield,16,0,0,1000000.0,3,1
+24,Centre-Forward,80,1,0,18000000.0,4,0
+28,Centre-Back,1101,0,0,18000000.0,4,0
+23,Central Midfield,9,0,0,800000.0,0,0
+22,Attacking Midfield,45,0,0,1500000.0,6,1
+26,Right Winger,45,0,0,1200000.0,2,0
+27,Right Winger,206,0,0,500000.0,3,0
+27,Defensive Midfield,821,0,1,600000.0,7,0
+24,Attacking Midfield,105,0,0,300000.0,7,1
+24,Centre-Forward,262,1,1,700000.0,2,0
+21,Central Midfield,116,0,0,850000.0,1,0
+23,Central Midfield,128,0,0,10000000.0,1,0
+24,Centre-Forward,38,0,0,700000.0,1,0
+25,Centre-Forward,181,0,0,2000000.0,2,1
+27,Right Winger,481,1,0,4000000.0,6,0
+22,Centre-Back,123,0,0,500000.0,1,0
+22,Centre-Back,495,1,1,1200000.0,3,0
+25,Centre-Back,219,0,0,1500000.0,1,1
+21,Right-Back,1322,1,1,400000.0,0,0
+23,Left Winger,66,1,1,1000000.0,2,1
+22,Centre-Back,1015,0,1,4000000.0,4,0
+27,Centre-Forward,279,1,2,500000.0,5,1
+25,Defensive Midfield,785,0,0,500000.0,9,1
+23,Left-Back,439,0,1,2000000.0,3,1
+21,Centre-Back,1150,0,0,800000.0,2,0
+21,Left-Back,343,0,0,1000000.0,3,0
+21,Left Winger,163,0,0,1000000.0,6,0
+21,Goalkeeper,1080,0,0,700000.0,2,1
+22,Defensive Midfield,216,0,0,3500000.0,1,0
+23,Right-Back,70,0,0,600000.0,4,0
+23,Right Midfield,556,0,0,2000000.0,4,1
+21,Attacking Midfield,716,1,1,28000000.0,3,1
+23,Centre-Back,1086,0,0,18000000.0,6,0
+23,Centre-Forward,1,0,0,350000.0,9,1
+23,Centre-Back,1712,1,0,2500000.0,2,0
+23,Goalkeeper,1710,0,0,1000000.0,2,0
+22,Right Winger,225,2,0,800000.0,4,0
+22,Right Midfield,1530,1,2,1800000.0,3,0
+21,Right Winger,300,0,0,400000.0,1,0
+22,Defensive Midfield,2,0,0,3000000.0,2,1
+20,Right Winger,93,0,0,7000000.0,2,0
+23,Centre-Forward,45,0,0,150000.0,3,1
+22,Left-Back,1223,0,0,4000000.0,1,0
+24,Centre-Forward,46,0,0,300000.0,2,0
+27,Centre-Forward,185,0,0,400000.0,3,1
+22,Right-Back,98,0,0,300000.0,2,1
+21,Right Winger,181,0,0,12000000.0,3,1
+21,Right Winger,350,0,1,500000.0,4,0
+22,Central Midfield,90,0,0,15000000.0,5,0
+25,Centre-Back,453,0,0,3000000.0,3,0
+27,Centre-Back,320,0,0,1800000.0,6,1
+24,Left Winger,1135,1,1,10000000.0,5,1
+20,Attacking Midfield,15,0,0,300000.0,0,1
+21,Centre-Back,1271,0,0,700000.0,1,0
+21,Central Midfield,942,0,0,300000.0,2,1
+21,Attacking Midfield,54,1,0,200000.0,2,1
+21,Right Winger,77,0,1,4000000.0,1,0
+21,Right Winger,379,2,0,700000.0,3,0
+21,Attacking Midfield,124,0,0,3500000.0,2,0
+21,Right Winger,271,0,1,900000.0,1,1
+22,Attacking Midfield,25,0,0,500000.0,2,1
+22,Right Winger,808,2,2,800000.0,5,0
+23,Left Winger,256,0,0,1000000.0,5,1
+23,Left Winger,590,0,0,800000.0,6,1
+21,Centre-Forward,633,2,0,4000000.0,4,0
+20,Right Winger,180,0,0,800000.0,2,1
+21,Centre-Forward,107,0,0,850000.0,3,1
+23,Goalkeeper,2086,0,0,1000000.0,3,0
+22,Right Winger,178,0,0,600000.0,0,0
+24,Centre-Forward,180,1,0,22000000.0,8,0
+24,Defensive Midfield,305,0,0,2000000.0,2,0
+27,Centre-Forward,1602,10,4,8000000.0,8,0
+26,Defensive Midfield,407,1,0,3000000.0,3,1
+25,Left-Back,720,0,1,2500000.0,3,0
+26,Centre-Back,59,0,0,2000000.0,4,1
+20,Right-Back,45,0,0,15000000.0,2,1
+21,Right-Back,2372,1,0,22000000.0,3,0
+24,Right Winger,128,1,0,1000000.0,1,0
+21,Centre-Forward,1117,4,4,1700000.0,2,0
+25,Centre-Back,247,0,0,500000.0,4,0
+21,Right Winger,39,0,0,3000000.0,1,1
+20,Attacking Midfield,45,0,0,2500000.0,3,0
+21,Centre-Forward,124,1,0,1400000.0,1,0
+23,Goalkeeper,1618,0,0,1300000.0,2,0
+21,Right Winger,60,0,0,4000000.0,3,1
+21,Left Winger,105,0,0,350000.0,2,1
+21,Central Midfield,103,0,0,1500000.0,1,1
+25,Attacking Midfield,1339,7,4,1800000.0,4,0
+21,Centre-Back,441,0,0,2000000.0,6,0
+21,Right Winger,223,0,2,4500000.0,3,1
+21,Central Midfield,25,0,0,700000.0,2,0
+21,Central Midfield,236,0,0,500000.0,3,0
+20,Attacking Midfield,173,0,0,200000.0,4,0
+20,Defensive Midfield,2291,4,2,32000000.0,3,0
+25,Attacking Midfield,1428,7,1,5000000.0,1,0
+23,Centre-Forward,983,6,0,5000000.0,6,1
+20,Attacking Midfield,354,0,0,10000000.0,6,1
+24,Centre-Back,1350,0,0,500000.0,5,0
+20,Centre-Forward,35,0,0,100000.0,0,0
+26,Right Winger,1463,3,4,1200000.0,3,0
+23,Right Winger,417,1,1,3000000.0,4,1
+22,Goalkeeper,540,0,0,3500000.0,3,0
+22,Centre-Back,1232,1,1,2500000.0,4,1
+25,Centre-Forward,341,1,0,350000.0,6,1
+20,Centre-Back,178,0,0,8000000.0,3,1
+21,Centre-Back,848,0,0,12000000.0,4,0
+22,Left-Back,360,0,0,800000.0,1,1
+20,Central Midfield,53,0,0,500000.0,4,1
+20,Attacking Midfield,1154,4,3,8000000.0,1,0
+20,Right-Back,183,0,0,300000.0,0,1
+26,Centre-Forward,577,1,0,800000.0,1,1
+24,Centre-Back,1077,0,0,150000.0,4,0
+20,Centre-Forward,58,1,0,24000000.0,3,0
+23,Central Midfield,270,0,0,6000000.0,6,0
+22,Left-Back,1112,1,1,300000.0,3,0
+21,Left Winger,69,0,0,7500000.0,3,1
+20,Left Winger,43,0,0,28000000.0,3,0
+20,Left Winger,58,0,0,2500000.0,2,1
+22,Centre-Forward,398,0,0,1500000.0,3,1
+23,Centre-Forward,398,0,0,1200000.0,4,1
+21,Centre-Back,118,0,1,7500000.0,3,1
+23,Central Midfield,1897,4,2,3000000.0,3,0
+19,Central Midfield,8,0,0,2000000.0,1,1
+22,Centre-Forward,954,10,1,5000000.0,3,0
+25,Left-Back,84,0,0,650000.0,1,1
+23,Left Winger,180,0,2,4000000.0,4,1
+23,Left Winger,1016,4,2,28000000.0,5,0
+23,Left Winger,334,0,0,700000.0,3,1
+20,Centre-Forward,46,0,0,400000.0,2,1
+20,Right Winger,264,1,1,500000.0,2,1
+22,Centre-Forward,175,1,0,7500000.0,3,0
+27,Centre-Forward,1430,4,1,550000.0,3,0
+25,Central Midfield,539,1,0,7000000.0,6,0
+24,Centre-Forward,693,2,1,2000000.0,2,1
+22,Centre-Forward,1127,9,2,7000000.0,1,0
+25,Centre-Forward,1056,2,0,250000.0,5,1
+24,Centre-Forward,300,0,0,8000000.0,3,0
+21,Left-Back,77,0,0,4000000.0,2,0
+21,Centre-Back,1228,1,1,3000000.0,5,0
+22,Right Winger,605,0,1,12000000.0,3,1
+24,Left Winger,929,1,1,600000.0,2,0
+21,Right Winger,15,0,0,550000.0,5,1
+24,Left-Back,1302,0,3,1300000.0,2,0
+23,Right-Back,240,0,0,2500000.0,6,0
+19,Right Winger,16,0,0,5000000.0,3,1
+21,Right Midfield,586,1,0,300000.0,0,0
+22,Centre-Forward,688,4,2,600000.0,3,1
+24,Centre-Back,238,0,0,5000000.0,2,1
+21,Defensive Midfield,309,0,1,6000000.0,1,0
+22,Defensive Midfield,1273,1,0,6000000.0,3,1
+20,Centre-Back,1279,1,0,2500000.0,3,0
+25,Defensive Midfield,90,0,0,700000.0,4,0
+23,Left Midfield,90,0,0,700000.0,4,0
+19,Right Winger,65,0,0,5000000.0,2,1
+22,Right-Back,360,0,0,150000.0,2,0
+20,Right Winger,4,0,1,1000000.0,2,0
+23,Centre-Forward,1,0,0,400000.0,3,1
+21,Right Winger,97,0,0,200000.0,2,1
+18,Attacking Midfield,165,0,0,40000000.0,0,1
+20,Right-Back,178,0,0,700000.0,1,1
+22,Defensive Midfield,286,0,0,300000.0,0,0
+23,Central Midfield,1130,4,2,1500000.0,1,0
+23,Central Midfield,40,0,0,4500000.0,4,1
+20,Left-Back,1705,0,3,5000000.0,0,0
+21,Defensive Midfield,1228,1,0,1000000.0,2,0
+19,Centre-Forward,59,0,0,700000.0,0,0
+22,Right Winger,969,3,3,3000000.0,2,0
+19,Centre-Forward,939,0,1,1000000.0,4,1
+21,Centre-Forward,364,0,0,900000.0,2,1
+22,Centre-Back,374,0,0,1500000.0,3,0
+21,Central Midfield,498,2,1,900000.0,1,0
+23,Attacking Midfield,907,2,0,1200000.0,2,0
+25,Right Winger,180,0,0,300000.0,0,1
+22,Left Winger,1902,6,7,7000000.0,2,0
+20,Left Winger,31,0,0,1000000.0,2,1
+24,Centre-Forward,1247,4,4,2000000.0,2,0
+23,Right Winger,1006,7,1,1000000.0,3,0
+21,Centre-Back,422,0,0,4500000.0,2,1
+19,Right Winger,327,1,2,22000000.0,0,0
+22,Centre-Back,49,0,0,500000.0,3,1
+21,Centre-Forward,68,0,0,100000.0,2,1
+24,Central Midfield,625,0,0,1500000.0,1,1
+20,Left-Back,310,0,0,250000.0,3,1
+20,Left-Back,121,0,0,150000.0,3,1
+20,Centre-Back,1707,1,1,18000000.0,0,0
+21,Centre-Forward,2081,10,5,10000000.0,3,0
+25,Right Winger,58,0,0,1500000.0,3,1
+20,Centre-Back,37,0,0,1000000.0,2,1
+23,Right Winger,1501,7,6,4000000.0,3,0
+20,Centre-Back,288,0,0,12000000.0,2,1
+22,Defensive Midfield,1418,0,1,2000000.0,2,0
+22,Attacking Midfield,319,0,0,150000.0,4,1
+23,Central Midfield,1593,4,0,14000000.0,5,0
+28,Right-Back,69,0,0,800000.0,5,0
+25,Right Winger,109,0,0,125000.0,1,1
+22,Left Winger,45,0,0,350000.0,3,0
+19,Centre-Back,270,0,0,3500000.0,0,0
+19,Central Midfield,90,0,0,12000000.0,1,0
+24,Left Winger,33,0,0,3000000.0,4,0
+21,Goalkeeper,450,0,0,500000.0,1,1
+18,Left Winger,1913,9,3,22000000.0,2,0
+21,Central Midfield,2309,3,1,2000000.0,0,0
+20,Attacking Midfield,12,0,0,300000.0,2,1
+19,Left Winger,56,0,0,10000000.0,1,1
+22,Right Winger,766,1,1,1800000.0,3,0
+19,Left Winger,143,0,0,22000000.0,0,1
+20,Centre-Back,39,0,0,75000.0,3,1
+25,Left-Back,4,0,0,200000.0,11,0
+19,Attacking Midfield,418,1,0,1500000.0,1,0
+21,Central Midfield,5,0,0,900000.0,3,1
+20,Centre-Back,2494,4,2,1700000.0,4,0
+20,Centre-Back,64,0,0,4000000.0,1,1
+19,Centre-Forward,278,2,0,500000.0,1,1
+19,Centre-Forward,278,2,0,500000.0,2,0
+20,Centre-Forward,1262,12,4,7000000.0,3,1
+18,Central Midfield,990,2,3,2000000.0,1,0
+23,Right Winger,1741,2,8,1800000.0,2,0
+22,Defensive Midfield,2135,2,1,10000000.0,2,0
+20,Centre-Forward,26,0,0,2500000.0,2,1
+20,Right-Back,66,0,0,7000000.0,1,1
+20,Right-Back,751,0,4,9000000.0,2,0
+23,Right Winger,23,0,0,300000.0,0,1
+21,Centre-Forward,58,0,0,2000000.0,2,1
+19,Left Winger,480,1,2,5000000.0,1,0
+21,Left Winger,321,0,1,300000.0,1,1
+19,Attacking Midfield,1161,1,2,4000000.0,4,0
+19,Centre-Forward,51,0,0,1000000.0,0,0
+20,Central Midfield,791,1,0,15000000.0,0,0
+18,Right-Back,541,0,0,4500000.0,2,0
+23,Centre-Back,1,0,0,3000000.0,2,1
+21,Right Winger,1718,3,1,1000000.0,3,0
+20,Right Winger,40,0,0,10000000.0,1,1
+19,Centre-Forward,11,0,0,25000000.0,1,1
+25,Defensive Midfield,1047,1,0,400000.0,4,0
+22,Left Winger,14,0,0,700000.0,3,0
+21,Left Winger,7,0,0,3000000.0,3,1
+22,Left Winger,7,0,0,2000000.0,4,1
+24,Centre-Back,4,0,0,800000.0,8,1
+21,Defensive Midfield,832,0,1,600000.0,2,0
+25,Centre-Back,298,1,0,2000000.0,4,1
+22,Defensive Midfield,42,0,0,6000000.0,4,1
+20,Left-Back,2955,4,4,12000000.0,1,0
+21,Attacking Midfield,45,0,0,18000000.0,3,1
+27,Centre-Forward,358,1,3,4000000.0,4,0
+22,Centre-Forward,63,0,0,1000000.0,0,1
+22,Centre-Back,997,0,0,6000000.0,1,0
+19,Centre-Forward,1164,4,0,7000000.0,1,1
+19,Centre-Forward,1809,6,0,18000000.0,2,0
+19,Centre-Forward,1011,10,1,5000000.0,1,0
+18,Centre-Back,270,0,0,1000000.0,1,0
+20,Defensive Midfield,575,0,0,1500000.0,3,0
+19,Right Winger,121,0,0,10000000.0,1,0
+20,Attacking Midfield,130,0,0,15000000.0,3,1
+19,Defensive Midfield,55,0,0,200000.0,0,1
+23,Right Winger,151,0,0,800000.0,1,0
+20,Centre-Forward,71,0,0,2000000.0,1,1
+19,Centre-Back,90,0,0,2500000.0,0,0
+20,Centre-Back,1673,0,0,55000000.0,3,0
+19,Centre-Forward,376,2,0,12000000.0,2,0
+22,Centre-Forward,1541,3,4,12000000.0,3,0
+19,Centre-Back,180,0,0,4000000.0,2,0
+20,Left Winger,385,1,2,5000000.0,1,1
+19,Attacking Midfield,13,0,0,600000.0,0,0
+18,Central Midfield,12,0,0,800000.0,1,1
+22,Defensive Midfield,180,0,0,6000000.0,4,1
+18,Centre-Forward,84,1,0,2500000.0,1,0
+19,Centre-Forward,976,2,0,3000000.0,2,1
+23,Right-Back,834,0,1,450000.0,3,0
+24,Left Winger,1162,5,8,1200000.0,2,0
+24,Left Winger,2117,11,11,3000000.0,3,0
+20,Central Midfield,441,1,0,400000.0,0,0
+23,Left Winger,339,0,0,2500000.0,7,1
+21,Central Midfield,529,2,1,9000000.0,2,0
+21,Centre-Back,1804,2,0,7500000.0,3,0
+22,Left-Back,4,0,0,300000.0,5,1
+21,Centre-Forward,257,1,2,5000000.0,2,0
+19,Centre-Forward,89,0,0,250000.0,2,1
+18,Centre-Forward,77,0,0,1200000.0,0,1
+22,Right Winger,1018,7,4,3000000.0,1,0
+19,Centre-Back,132,0,0,5000000.0,2,1
+22,Centre-Forward,282,0,0,650000.0,1,0
+23,Centre-Forward,915,4,1,1000000.0,3,0
+19,Central Midfield,684,1,0,400000.0,1,1
+21,Centre-Back,1440,0,0,900000.0,1,0
+22,Centre-Back,2700,1,0,800000.0,3,0
+18,Attacking Midfield,420,1,0,10000000.0,2,1
+27,Centre-Back,1405,0,1,200000.0,2,1
+18,Centre-Forward,15,0,0,2000000.0,3,1
+21,Attacking Midfield,336,0,1,700000.0,2,0
+19,Right Winger,38,0,0,1500000.0,0,1
+20,Central Midfield,15,0,0,100000.0,0,1
+21,Attacking Midfield,230,0,1,16000000.0,1,1
+18,Centre-Forward,4,0,0,2500000.0,2,1
+24,Right Winger,166,0,0,400000.0,2,1
+18,Attacking Midfield,89,0,0,10000000.0,1,0
+17,Centre-Forward,172,0,0,5000000.0,1,0
+18,Attacking Midfield,1773,4,1,4000000.0,0,0
+23,Centre-Forward,7,0,0,250000.0,2,1
+23,Centre-Forward,7,0,0,250000.0,3,0
+19,Centre-Back,1574,0,0,20000000.0,1,0
+19,Attacking Midfield,146,0,0,1000000.0,0,1
+20,Right Winger,248,0,0,2500000.0,0,0
+19,Right Winger,703,1,2,1200000.0,0,0
+21,Centre-Back,343,0,0,1000000.0,2,1
+20,Central Midfield,1634,2,0,2500000.0,2,0
+19,Left Winger,194,1,0,750000.0,0,1
+19,Goalkeeper,180,0,0,1500000.0,0,0
+19,Central Midfield,540,0,0,400000.0,2,0
+23,Left-Back,264,0,0,400000.0,2,1
+20,Right Winger,28,0,0,300000.0,2,1
+19,Centre-Back,90,0,0,12000000.0,1,0
+21,Right Winger,225,0,0,800000.0,1,0
+18,Central Midfield,1,0,0,800000.0,1,1
+21,Left Winger,623,0,2,8000000.0,4,1
+22,Centre-Forward,1414,7,1,700000.0,1,0
+23,Centre-Forward,2287,9,5,2500000.0,2,0
+23,Centre-Forward,2136,14,3,3500000.0,3,0
+23,Centre-Forward,2136,14,3,3500000.0,4,0
+20,Centre-Back,7,0,0,100000.0,1,0
+17,Central Midfield,81,0,0,100000.0,0,1
+22,Centre-Forward,270,1,1,15000000.0,3,1
+18,Centre-Forward,373,4,2,10000000.0,1,0
+19,Centre-Back,90,0,0,200000.0,2,1
+19,Right Winger,875,2,5,42000000.0,0,0
+18,Centre-Forward,530,3,2,10000000.0,2,0
+20,Centre-Forward,84,1,0,400000.0,1,1
+23,Centre-Back,90,0,0,300000.0,3,1
+20,Centre-Forward,363,7,0,2500000.0,4,0
+20,Centre-Back,368,1,0,12000000.0,3,1
+20,Centre-Forward,660,4,0,4000000.0,2,0
+21,Left-Back,32,0,0,100000.0,4,1
+24,Central Midfield,665,1,1,400000.0,2,0
+19,Goalkeeper,2430,0,0,4000000.0,0,0
+19,Right Winger,45,0,0,10000000.0,0,0
+24,Centre-Back,90,0,0,275000.0,0,1
+28,Left-Back,92,0,0,375000.0,1,1
+18,Attacking Midfield,68,0,0,4000000.0,2,0
+20,Defensive Midfield,22,0,0,400000.0,1,1
+26,Left-Back,36,0,0,175000.0,1,1
+18,Centre-Forward,262,0,0,150000.0,1,1
+18,Centre-Forward,131,0,0,4000000.0,0,1
+19,Centre-Forward,536,1,0,8000000.0,1,0
+19,Centre-Forward,373,1,0,3000000.0,0,0
+20,Centre-Forward,24,0,0,175000.0,3,1
+21,Left Winger,46,0,1,150000.0,0,0
+24,Left Winger,48,0,0,500000.0,4,1
+22,Central Midfield,706,0,0,300000.0,0,1
+22,Left Winger,23,0,0,2200000.0,0,1
+23,Left Winger,327,2,1,2000000.0,1,0
+17,Centre-Forward,157,0,0,4000000.0,0,0
+22,Central Midfield,312,0,1,200000.0,0,1
+20,Right-Back,19,0,0,75000.0,2,1
+17,Central Midfield,607,0,0,3000000.0,1,0
+19,Centre-Back,6,0,0,3000000.0,3,0
+18,Left-Back,7,0,0,10000000.0,0,0
+20,Centre-Back,2270,2,3,6000000.0,0,0
+20,Right Midfield,27,0,0,75000.0,3,0
+19,Right Winger,1783,7,0,700000.0,0,0
+19,Centre-Forward,987,2,2,1500000.0,1,0
+19,Centre-Forward,133,0,0,200000.0,0,1
+19,Centre-Forward,178,0,0,200000.0,1,0
+17,Centre-Forward,1,0,0,250000.0,1,0
+18,Central Midfield,1171,2,0,1000000.0,0,0
+21,Centre-Forward,24,0,0,100000.0,0,0
+18,Right Winger,310,0,0,7000000.0,0,0
