@@ -18,3 +18,6 @@ on the task of predicting whether a football player will be loaned.
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+
+## Live demo
+https://prorate-estimator-domelike.ngrok-free.dev
