@@ -560,11 +560,6 @@ with tab_lime:
     ).sort_values("Contribution")
     st.dataframe(contrib_df, width='stretch')
 
-    st.caption(
-        "💡 LIME is stochastic — a different `random_state` can produce "
-        "slightly different attributions. This is one of its known "
-        "**limits of explanations** (Chapter 6)."
-    )
 
 # ==================================================================
 # Tab 6 — Live Prediction + XAI (cached on button click)
