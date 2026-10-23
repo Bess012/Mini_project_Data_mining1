@@ -213,7 +213,7 @@ def compute_shap_explanation(model_name, pipe, X_train_prep, X_sample, feature_n
             )
 
     if model_name == "Logistic Regression":
-        background = shap.sample(X_train_prep, 100, random_state=42)
+        background = shap.sample(X_train_prep, 30, random_state=42)
         explainer = shap.LinearExplainer(clf, background)
         sv = explainer.shap_values(X_sample)
         return shap.Explanation(
