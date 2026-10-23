@@ -135,7 +135,7 @@ def train_models(df):
         )
         pipe.fit(X_train, y_train)
 
-        # Cache preprocessed matrices & feature names once (same preprocessor for all)
+        # Cache preprocessed matrices & feature names once
         if X_train_prep is None:
             prep = pipe.named_steps["preprocessor"]
             X_train_prep = prep.transform(X_train)
@@ -207,14 +207,16 @@ def compute_shap_explanation(model_name, pipe, X_train_prep, X_sample, feature_n
             )
 
     if model_name == "Logistic Regression":
-        explainer = shap.LinearExplainer(clf, X_train_prep)
+        # Explicit 100-row background so SHAP doesn't silently subsample
+        background = shap.sample(X_train_prep, 100, random_state=42)
+        explainer = shap.LinearExplainer(clf, background)
         sv = explainer.shap_values(X_sample)
         return shap.Explanation(
             values=sv, base_values=explainer.expected_value,
             data=X_sample, feature_names=feature_names,
         )
 
-    # KNN → KernelExplainer is slow, so cap the sample size
+    # KNN → KernelExplainer is slow, cap the sample size
     X_sample = X_sample[: min(15, len(X_sample))]
     background = shap.sample(X_train_prep, 30, random_state=42)
     explainer = shap.KernelExplainer(clf.predict_proba, background)
@@ -233,13 +235,34 @@ def compute_shap_explanation(model_name, pipe, X_train_prep, X_sample, feature_n
 def shap_single(model_name, pipe, X_train_prep, X_single, feature_names):
     """SHAP explanation for exactly one preprocessed row."""
     full = compute_shap_explanation(
-        model_name, pipe, X_train_prep,
-        X_single, feature_names,
+        model_name, pipe, X_train_prep, X_single, feature_names,
     )
-    # full may be (1, n_features) Explanation → index [0] for single sample
     if full.values.ndim > 1:
         return full[0]
     return full
+
+
+# ------------------------------------------------------------------
+# CACHED wrappers — the actual fix for the slow-on-feature-change bug
+# ------------------------------------------------------------------
+@st.cache_data(show_spinner=False)
+def compute_shap_global_cached(model_name, n_shap,
+                               _trained, _X_train_prep, _X_test_prep, feat_names):
+    """Cache SHAP by (model, n_shap). Prevents recompute on every Streamlit rerun."""
+    pipe = _trained[model_name]
+    return compute_shap_explanation(
+        model_name, pipe, _X_train_prep,
+        _X_test_prep[:n_shap], feat_names,
+    )
+
+
+@st.cache_data(show_spinner=False)
+def shap_single_cached(model_name, row_bytes,
+                       _trained, _X_train_prep, feat_names):
+    """Cache single-row SHAP keyed by (model, row bytes)."""
+    row_prep = np.frombuffer(row_bytes, dtype=np.float64).reshape(1, -1)
+    pipe = _trained[model_name]
+    return shap_single(model_name, pipe, _X_train_prep, row_prep, feat_names)
 
 
 # ==================================================================
@@ -263,12 +286,25 @@ def lime_single(pipe, X_train_prep, X_single_prep, feature_names,
     )
 
 
+@st.cache_data(show_spinner=False)
+def lime_cached(model_name, row_bytes,
+                _trained, _X_train_prep, feat_names,
+                num_features=10, num_samples=3000):
+    """Cache LIME by (model, row bytes)."""
+    row_prep = np.frombuffer(row_bytes, dtype=np.float64).reshape(1, -1)
+    pipe = _trained[model_name]
+    return lime_single(
+        pipe, _X_train_prep, row_prep, feat_names,
+        num_features=num_features, num_samples=num_samples,
+    )
+
+
 # ==================================================================
 # Load + train
 # ==================================================================
 st.sidebar.title("⚽ Loan Prediction · XAI")
 st.sidebar.markdown(
-    "Football player loan prediction — model comparison + **SHAP** + **LIME** explanations."
+    "Football player loan prediction — model comparison + **SHAP** + **LIME**."
 )
 
 df = load_data()
@@ -310,7 +346,7 @@ with tab_overview:
             "Recall@thr": "{:.3f}", "Accuracy@thr": "{:.3f}",
         })
     )
-    st.dataframe(styled, use_container_width=True)
+    st.dataframe(styled, width='stretch')
 
     st.markdown("---")
     st.subheader("CV AUC mean ± std  vs  test metrics")
@@ -412,23 +448,20 @@ with tab_cm:
             st.pyplot(fig, clear_figure=True)
 
 # ==================================================================
-# Tab 4 — SHAP
+# Tab 4 — SHAP  (cached — no more recompute on every interaction)
 # ==================================================================
 with tab_shap:
     st.subheader("🧠 SHAP — SHapley Additive exPlanations")
     st.markdown(
         "SHAP assigns each feature a contribution to the prediction using "
         "Shapley values from cooperative game theory. Contributions are "
-        "**additive**: `f(x) = φ₀ + Σ φⱼ` — they exactly explain the gap "
-        "between the average prediction and this prediction."
+        "**additive**: `f(x) = φ₀ + Σ φⱼ`."
     )
 
     st.markdown("### Global explanations")
     c1, c2 = st.columns([1, 2])
     with c1:
-        shap_model = st.selectbox(
-            "Model", list(trained.keys()), key="shap_model",
-        )
+        shap_model = st.selectbox("Model", list(trained.keys()), key="shap_model")
     with c2:
         n_shap = st.slider(
             "Samples to explain (speed vs. coverage)",
@@ -437,11 +470,18 @@ with tab_shap:
             key="shap_n",
         )
 
-    pipe = trained[shap_model]
+    if shap_model == "KNN":
+        st.warning(
+            "⚠️ KNN uses SHAP's **KernelExplainer** (model-agnostic). "
+            "It's the slowest explainer — expect 15–30 s on first compute. "
+            "Tree-based models (Decision Tree / RF / XGBoost) are ~100× faster. "
+            "Results are cached after the first run."
+        )
+
     with st.spinner(f"Computing SHAP values for {shap_model}…"):
-        explanation = compute_shap_explanation(
-            shap_model, pipe, X_train_prep,
-            X_test_prep[:n_shap], feat_names,
+        explanation = compute_shap_global_cached(
+            shap_model, n_shap,
+            trained, X_train_prep, X_test_prep, feat_names,
         )
 
     gc1, gc2 = st.columns(2)
@@ -458,10 +498,9 @@ with tab_shap:
         st.pyplot(fig, clear_figure=True)
 
     st.caption(
-        "💡 Read the beeswarm: each dot is a test player. **Horizontal** "
-        "position = SHAP value (push toward Loan or Non-Loan). **Color** = "
-        "the player's feature value. If red (high value) is on the right, "
-        "high feature values push predictions *toward* Loan."
+        "💡 Beeswarm: each dot is a test player. **Horizontal** position = "
+        "SHAP value (push toward Loan or Non-Loan). **Color** = the feature "
+        "value. Red on the right = high feature values push toward Loan."
     )
 
     st.markdown("### Local explanation — one player")
@@ -473,26 +512,24 @@ with tab_shap:
     st.pyplot(fig, clear_figure=True)
 
     st.markdown(f"**Original features for test row #{inst}:**")
-    st.dataframe(X_test.iloc[[inst]], use_container_width=True)
-    p_inst = pipe.predict_proba(X_test.iloc[[inst]])[0, 1]
+    st.dataframe(X_test.iloc[[inst]], width='stretch')
+    p_inst = trained[shap_model].predict_proba(X_test.iloc[[inst]])[0, 1]
     st.metric(f"Predicted P(loan) — {shap_model}", f"{p_inst:.1%}")
 
     st.caption(
         "💡 Waterfall: starts from φ₀ (average model prediction) and adds each "
-        "feature's contribution. Bars pushing right = toward Loan; left = "
-        "away from Loan. Reaching the final bar gives the exact model output."
+        "feature's contribution. Reaching the final bar gives the exact model output."
     )
 
 # ==================================================================
-# Tab 5 — LIME
+# Tab 5 — LIME  (cached)
 # ==================================================================
 with tab_lime:
     st.subheader("🔬 LIME — Local Interpretable Model-agnostic Explanations")
     st.markdown(
         "LIME fits a **simple linear model** around a single prediction. "
-        "The bars show which features (in their original units) push this "
-        "player toward Loan vs. Non-Loan. It is model-agnostic and does not "
-        "assume any internal structure."
+        "The bars show which features (in original units) push this player "
+        "toward Loan vs. Non-Loan."
     )
 
     st.caption(
@@ -511,45 +548,44 @@ with tab_lime:
             key="lime_inst",
         )
 
-    pipe = trained[lime_model]
+    row_bytes = X_test_prep[lime_inst].astype(np.float64).tobytes()
+
     with st.spinner("Fitting LIME explanation…"):
-        exp = lime_single(
-            pipe, X_train_prep,
-            X_test_prep[lime_inst:lime_inst + 1],
-            feat_names, num_features=10,
+        exp = lime_cached(
+            lime_model, row_bytes,
+            trained, X_train_prep, feat_names,
         )
 
     st.markdown(f"**Original features — test row #{lime_inst}:**")
-    st.dataframe(X_test.iloc[[lime_inst]], use_container_width=True)
+    st.dataframe(X_test.iloc[[lime_inst]], width='stretch')
 
     fig = exp.as_pyplot_figure()
     fig.set_size_inches(10, 5)
     st.pyplot(fig, clear_figure=True)
 
-    p_inst = pipe.predict_proba(X_test.iloc[[lime_inst]])[0, 1]
+    p_inst = trained[lime_model].predict_proba(X_test.iloc[[lime_inst]])[0, 1]
     st.metric(f"Predicted P(loan) — {lime_model}", f"{p_inst:.1%}")
 
     st.markdown("**LIME feature contributions (table form):**")
     contrib_df = pd.DataFrame(
         exp.as_list(), columns=["Feature condition", "Contribution"],
     ).sort_values("Contribution")
-    st.dataframe(contrib_df, use_container_width=True)
+    st.dataframe(contrib_df, width='stretch')
 
     st.caption(
-        "💡 LIME bars show the **magnitude** of each feature's local push. "
-        "Note that LIME is stochastic — a different `random_state` can "
-        "produce slightly different attributions. This is one of its known "
-        "limits (Chapter 6: *limits of explanations*)."
+        "💡 LIME is stochastic — a different `random_state` can produce "
+        "slightly different attributions. This is one of its known "
+        "**limits of explanations** (Chapter 6)."
     )
 
 # ==================================================================
-# Tab 6 — Live Prediction + XAI
+# Tab 6 — Live Prediction + XAI (cached on button click)
 # ==================================================================
 with tab_predict:
     st.subheader("Score a single player")
     st.markdown(
-        "Enter the attributes → predict with every tuned model → "
-        "**and explain the prediction** with SHAP and LIME."
+        "Enter attributes → predict with every tuned model → "
+        "**explain** the prediction with SHAP and LIME."
     )
 
     c1, c2, c3 = st.columns(3)
@@ -593,7 +629,7 @@ with tab_predict:
         pred_df = pd.DataFrame(rows).set_index("Model")
         st.dataframe(
             pred_df.style.format({"P(loan)": "{:.3f}", "OOF Threshold": "{:.2f}"}),
-            use_container_width=True,
+            width='stretch',
         )
 
         avg_p = pred_df["P(loan)"].mean()
@@ -624,16 +660,18 @@ with tab_predict:
         )
         pipe = trained[xai_model]
 
-        # Preprocess the single row (preserve DataFrame feature order)
+        # Preprocess once, share between SHAP and LIME
         row_prep = pipe.named_steps["preprocessor"].transform(row_df)
+        row_bytes = row_prep.astype(np.float64).tobytes()
 
         xc1, xc2 = st.columns(2)
 
         with xc1:
             st.markdown(f"**SHAP — waterfall for {xai_model}**")
             with st.spinner("Computing SHAP…"):
-                expl = shap_single(
-                    xai_model, pipe, X_train_prep, row_prep, feat_names,
+                expl = shap_single_cached(
+                    xai_model, row_bytes,
+                    trained, X_train_prep, feat_names,
                 )
             fig = plt.figure(figsize=(9, 5))
             shap.plots.waterfall(expl, max_display=10, show=False)
@@ -642,8 +680,9 @@ with tab_predict:
         with xc2:
             st.markdown(f"**LIME — local explanation for {xai_model}**")
             with st.spinner("Fitting LIME…"):
-                exp = lime_single(
-                    pipe, X_train_prep, row_prep, feat_names,
+                exp = lime_cached(
+                    xai_model, row_bytes,
+                    trained, X_train_prep, feat_names,
                     num_features=10, num_samples=2000,
                 )
             fig = exp.as_pyplot_figure()
@@ -662,10 +701,10 @@ with tab_predict:
 # ==================================================================
 with tab_data:
     st.subheader("Data preview")
-    st.dataframe(df.head(50), use_container_width=True)
+    st.dataframe(df.head(50), width='stretch')
 
     st.subheader("Summary statistics")
-    st.dataframe(df.describe(include="all").T, use_container_width=True)
+    st.dataframe(df.describe(include="all").T, width='stretch')
 
     st.subheader("Target balance")
     fig, ax = plt.subplots(figsize=(5, 3.5))
