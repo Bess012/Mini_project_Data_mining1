@@ -135,7 +135,7 @@ def train_models(df, progress_cb=None):
             ("classifier",   clone(model)),
         ])
         cv_scores = cross_val_score(
-            pipe, X_train, y_train, cv=cv, scoring="roc_auc", n_jobs=-1,
+            pipe, X_train, y_train, cv=cv, scoring="roc_auc", n_jobs=1,
         )
         pipe.fit(X_train, y_train)
 
@@ -151,7 +151,7 @@ def train_models(df, progress_cb=None):
         oof_prob = cross_val_predict(
             clone(pipe), X_train, y_train,
             cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42),
-            method="predict_proba", n_jobs=-1,
+            method="predict_proba", n_jobs=1,
         )[:, 1]
         thresholds = np.arange(0.20, 0.71, 0.01)
         f1s = [f1_score(y_train, (oof_prob >= t).astype(int),
