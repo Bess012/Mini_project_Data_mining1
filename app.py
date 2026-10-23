@@ -318,12 +318,6 @@ st.sidebar.caption(f"Positive rate: **{df['is_loaned'].mean():.1%}**")
 # Header
 # ==================================================================
 st.title("⚽ Football Player Loan Prediction — with Explainable AI")
-st.markdown(
-    "Model comparison on repeated 5×2 stratified CV ROC-AUC, "
-    "plus **SHAP** (global + local feature attribution) and **LIME** "
-    "(local surrogate explanation) per prediction."
-)
-
 tab_overview, tab_curves, tab_cm, tab_shap, tab_lime, tab_predict, tab_data = st.tabs([
     "📊 Model Comparison", "📈 ROC & PR Curves", "🔢 Confusion Matrices",
     "🧠 SHAP", "🔬 LIME", "🎯 Live Prediction", "📁 Data",
@@ -532,12 +526,6 @@ with tab_lime:
         "toward Loan vs. Non-Loan."
     )
 
-    st.caption(
-        "**Chapter 6 — LIME steps:** ① perturb the instance, ② score the "
-        "perturbations with the black-box model, ③ weight them by proximity, "
-        "④ fit a weighted linear model whose coefficients form the explanation."
-    )
-
     lc1, lc2 = st.columns([1, 2])
     with lc1:
         lime_model = st.selectbox("Model", list(trained.keys()), key="lime_model")
@@ -688,13 +676,6 @@ with tab_predict:
             fig = exp.as_pyplot_figure()
             fig.set_size_inches(9, 5)
             st.pyplot(fig, clear_figure=True)
-
-        st.info(
-            "**Chapter 6 — model coherence ≠ real fairness.** SHAP and LIME "
-            "explain *how the model decides*, but they cannot guarantee that "
-            "the model's decision is fair. Always pair XAI with bias/equity "
-            "audits (age, nationality, protected attributes)."
-        )
 
 # ==================================================================
 # Tab 7 — Data
