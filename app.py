@@ -58,15 +58,15 @@ def prettify_feature_names(raw_names):
 
 
 # ==================================================================
-# Cached data + training
+# Data loading + training function (no caching — manual trigger)
 # ==================================================================
 @st.cache_data(show_spinner="Loading data…")
 def load_data():
     return pd.read_csv("df.csv")
 
 
-@st.cache_resource(show_spinner="Training models… (first run only)")
-def train_models(df):
+def train_models(df, progress_cb=None):
+    """Fit all 5 models. progress_cb(frac, msg) is optional and updates a bar."""
     X = df.drop(columns=["is_loaned"])
     y = df["is_loaned"].astype(int)
 
@@ -124,8 +124,12 @@ def train_models(df):
     cv = RepeatedStratifiedKFold(n_splits=5, n_repeats=2, random_state=42)
 
     trained, rows, X_train_prep, X_test_prep, feat_names = {}, [], None, None, None
+    n_models = len(models)
 
-    for name, model in models.items():
+    for i, (name, model) in enumerate(models.items()):
+        if progress_cb:
+            progress_cb(i / n_models, f"Training {name}…")
+
         pipe = Pipeline([
             ("preprocessor", clone(preprocessor)),
             ("classifier",   clone(model)),
@@ -135,7 +139,6 @@ def train_models(df):
         )
         pipe.fit(X_train, y_train)
 
-        # Cache preprocessed matrices & feature names once
         if X_train_prep is None:
             prep = pipe.named_steps["preprocessor"]
             X_train_prep = prep.transform(X_train)
@@ -170,6 +173,9 @@ def train_models(df):
             "Accuracy@thr":  accuracy_score(y_test, test_pred_thr),
         })
         trained[name] = pipe
+
+    if progress_cb:
+        progress_cb(1.0, "✅ Training complete")
 
     results = (
         pd.DataFrame(rows)
@@ -207,7 +213,6 @@ def compute_shap_explanation(model_name, pipe, X_train_prep, X_sample, feature_n
             )
 
     if model_name == "Logistic Regression":
-        # Explicit 100-row background so SHAP doesn't silently subsample
         background = shap.sample(X_train_prep, 100, random_state=42)
         explainer = shap.LinearExplainer(clf, background)
         sv = explainer.shap_values(X_sample)
@@ -216,7 +221,7 @@ def compute_shap_explanation(model_name, pipe, X_train_prep, X_sample, feature_n
             data=X_sample, feature_names=feature_names,
         )
 
-    # KNN → KernelExplainer is slow, cap the sample size
+    # KNN → KernelExplainer
     X_sample = X_sample[: min(15, len(X_sample))]
     background = shap.sample(X_train_prep, 30, random_state=42)
     explainer = shap.KernelExplainer(clf.predict_proba, background)
@@ -233,7 +238,6 @@ def compute_shap_explanation(model_name, pipe, X_train_prep, X_sample, feature_n
 
 
 def shap_single(model_name, pipe, X_train_prep, X_single, feature_names):
-    """SHAP explanation for exactly one preprocessed row."""
     full = compute_shap_explanation(
         model_name, pipe, X_train_prep, X_single, feature_names,
     )
@@ -242,13 +246,9 @@ def shap_single(model_name, pipe, X_train_prep, X_single, feature_names):
     return full
 
 
-# ------------------------------------------------------------------
-# CACHED wrappers — the actual fix for the slow-on-feature-change bug
-# ------------------------------------------------------------------
 @st.cache_data(show_spinner=False)
 def compute_shap_global_cached(model_name, n_shap,
                                _trained, _X_train_prep, _X_test_prep, feat_names):
-    """Cache SHAP by (model, n_shap). Prevents recompute on every Streamlit rerun."""
     pipe = _trained[model_name]
     return compute_shap_explanation(
         model_name, pipe, _X_train_prep,
@@ -259,7 +259,6 @@ def compute_shap_global_cached(model_name, n_shap,
 @st.cache_data(show_spinner=False)
 def shap_single_cached(model_name, row_bytes,
                        _trained, _X_train_prep, feat_names):
-    """Cache single-row SHAP keyed by (model, row bytes)."""
     row_prep = np.frombuffer(row_bytes, dtype=np.float64).reshape(1, -1)
     pipe = _trained[model_name]
     return shap_single(model_name, pipe, _X_train_prep, row_prep, feat_names)
@@ -290,7 +289,6 @@ def lime_single(pipe, X_train_prep, X_single_prep, feature_names,
 def lime_cached(model_name, row_bytes,
                 _trained, _X_train_prep, feat_names,
                 num_features=10, num_samples=3000):
-    """Cache LIME by (model, row bytes)."""
     row_prep = np.frombuffer(row_bytes, dtype=np.float64).reshape(1, -1)
     pipe = _trained[model_name]
     return lime_single(
@@ -300,7 +298,7 @@ def lime_cached(model_name, row_bytes,
 
 
 # ==================================================================
-# Load + train
+# Sidebar + data
 # ==================================================================
 st.sidebar.title("⚽ Loan Prediction · XAI")
 st.sidebar.markdown(
@@ -311,20 +309,99 @@ df = load_data()
 st.sidebar.caption(f"**{len(df):,}** rows · **{df.shape[1]}** columns")
 st.sidebar.caption(f"Positive rate: **{df['is_loaned'].mean():.1%}**")
 
-(trained, results, X_train, X_test, y_train, y_test,
- X_train_prep, X_test_prep, feat_names) = train_models(df)
-
 # ==================================================================
-# Header
+# Header + tabs
 # ==================================================================
 st.title("⚽ Football Player Loan Prediction — with Explainable AI")
-tab_overview, tab_curves, tab_cm, tab_shap, tab_lime, tab_predict, tab_data = st.tabs([
+
+(tab_training, tab_overview, tab_curves, tab_cm,
+ tab_shap, tab_lime, tab_predict, tab_data) = st.tabs([
+    "🏋️ Training",
     "📊 Model Comparison", "📈 ROC & PR Curves", "🔢 Confusion Matrices",
     "🧠 SHAP", "🔬 LIME", "🎯 Live Prediction", "📁 Data",
 ])
 
 # ==================================================================
-# Tab 1 — Overview
+# Training tab (always rendered)
+# ==================================================================
+with tab_training:
+    st.subheader("🏋️ Training")
+
+    st.markdown("**Model overview & hyperparameters**")
+    hyperparams_df = pd.DataFrame([
+        {"Model": "Logistic Regression",
+         "Hyperparameters": "C=0.03, penalty='l2', solver='liblinear', class_weight='balanced', max_iter=2000"},
+        {"Model": "Decision Tree",
+         "Hyperparameters": "max_depth=3, min_samples_leaf=20, min_samples_split=5, class_weight='balanced'"},
+        {"Model": "Random Forest",
+         "Hyperparameters": "n_estimators=100, max_depth=5, min_samples_leaf=20, max_features=0.5"},
+        {"Model": "KNN",
+         "Hyperparameters": "n_neighbors=41, weights='distance', p=1"},
+        {"Model": "XGBoost",
+         "Hyperparameters": "n_estimators=200, max_depth=3, learning_rate=0.01, subsample=0.9, colsample_bytree=0.9, min_child_weight=20, reg_lambda=15, scale_pos_weight≈1.69"},
+    ]).set_index("Model")
+    st.dataframe(hyperparams_df, width='stretch')
+
+    st.markdown("---")
+
+    if "trained_bundle" not in st.session_state:
+        if st.button("🚀 Train all models", type="primary"):
+            progress = st.progress(0.0, text="Preparing…")
+
+            def _cb(frac, msg):
+                progress.progress(frac, text=msg)
+
+            st.session_state["trained_bundle"] = train_models(df, progress_cb=_cb)
+            st.rerun()
+    else:
+        st.success("✅ Models trained. Other tabs are now available.")
+        if st.button("🔄 Retrain all models"):
+            compute_shap_global_cached.clear()
+            shap_single_cached.clear()
+            lime_cached.clear()
+
+            progress = st.progress(0.0, text="Preparing…")
+
+            def _cb(frac, msg):
+                progress.progress(frac, text=msg)
+
+            st.session_state["trained_bundle"] = train_models(df, progress_cb=_cb)
+            st.rerun()
+
+# ==================================================================
+# Data tab (always rendered, does not need training)
+# ==================================================================
+with tab_data:
+    st.subheader("Data preview")
+    st.dataframe(df.head(50), width='stretch')
+
+    st.subheader("Summary statistics")
+    st.dataframe(df.describe(include="all").T, width='stretch')
+
+    st.subheader("Target balance")
+    fig, ax = plt.subplots(figsize=(5, 3.5))
+    df["is_loaned"].value_counts().plot(
+        kind="bar", ax=ax, color=["#4c72b0", "#dd8452"],
+    )
+    ax.set_xticklabels(["Not loaned (0)", "Loaned (1)"], rotation=0)
+    ax.set_ylabel("Count")
+    st.pyplot(fig, clear_figure=True)
+
+# ==================================================================
+# Guard: all remaining tabs need training
+# ==================================================================
+if "trained_bundle" not in st.session_state:
+    for _t in [tab_overview, tab_curves, tab_cm,
+               tab_shap, tab_lime, tab_predict]:
+        with _t:
+            st.info("Train the models first in the **🏋️ Training** tab.")
+    st.stop()
+
+(trained, results, X_train, X_test, y_train, y_test,
+ X_train_prep, X_test_prep, feat_names) = st.session_state["trained_bundle"]
+
+# ==================================================================
+# Tab — Model Comparison
 # ==================================================================
 with tab_overview:
     st.subheader("Metrics table (sorted by CV AUC mean)")
@@ -373,7 +450,7 @@ with tab_overview:
     )
 
 # ==================================================================
-# Tab 2 — ROC / PR curves
+# Tab — ROC / PR curves
 # ==================================================================
 with tab_curves:
     col1, col2 = st.columns(2)
@@ -410,7 +487,7 @@ with tab_curves:
         st.pyplot(fig, clear_figure=True)
 
 # ==================================================================
-# Tab 3 — Confusion matrices
+# Tab — Confusion matrices
 # ==================================================================
 with tab_cm:
     st.subheader("Confusion matrices — test set")
@@ -442,7 +519,7 @@ with tab_cm:
             st.pyplot(fig, clear_figure=True)
 
 # ==================================================================
-# Tab 4 — SHAP  (cached — no more recompute on every interaction)
+# Tab — SHAP
 # ==================================================================
 with tab_shap:
     st.subheader("🧠 SHAP — SHapley Additive exPlanations")
@@ -516,7 +593,7 @@ with tab_shap:
     )
 
 # ==================================================================
-# Tab 5 — LIME  (cached)
+# Tab — LIME
 # ==================================================================
 with tab_lime:
     st.subheader("🔬 LIME — Local Interpretable Model-agnostic Explanations")
@@ -560,9 +637,8 @@ with tab_lime:
     ).sort_values("Contribution")
     st.dataframe(contrib_df, width='stretch')
 
-
 # ==================================================================
-# Tab 6 — Live Prediction + XAI (cached on button click)
+# Tab — Live Prediction + XAI
 # ==================================================================
 with tab_predict:
     st.subheader("Score a single player")
@@ -633,7 +709,6 @@ with tab_predict:
         ax.legend(); plt.tight_layout()
         st.pyplot(fig, clear_figure=True)
 
-        # ----- XAI for this single prediction -----
         st.markdown("---")
         st.markdown("### 🧠 Explain this prediction")
         xai_model = st.selectbox(
@@ -643,7 +718,6 @@ with tab_predict:
         )
         pipe = trained[xai_model]
 
-        # Preprocess once, share between SHAP and LIME
         row_prep = pipe.named_steps["preprocessor"].transform(row_df)
         row_bytes = row_prep.astype(np.float64).tobytes()
 
@@ -671,22 +745,3 @@ with tab_predict:
             fig = exp.as_pyplot_figure()
             fig.set_size_inches(9, 5)
             st.pyplot(fig, clear_figure=True)
-
-# ==================================================================
-# Tab 7 — Data
-# ==================================================================
-with tab_data:
-    st.subheader("Data preview")
-    st.dataframe(df.head(50), width='stretch')
-
-    st.subheader("Summary statistics")
-    st.dataframe(df.describe(include="all").T, width='stretch')
-
-    st.subheader("Target balance")
-    fig, ax = plt.subplots(figsize=(5, 3.5))
-    df["is_loaned"].value_counts().plot(
-        kind="bar", ax=ax, color=["#4c72b0", "#dd8452"],
-    )
-    ax.set_xticklabels(["Not loaned (0)", "Loaned (1)"], rotation=0)
-    ax.set_ylabel("Count")
-    st.pyplot(fig, clear_figure=True)
